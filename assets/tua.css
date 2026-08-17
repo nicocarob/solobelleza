@@ -1,0 +1,249 @@
+/* TUA Professional – visual overrides for Solo Belleza */
+
+:root {
+  --tua-pink: #c72573;
+  --tua-red: #eb3049;
+  --tua-gray-bg: #f2f4f5;
+  --tua-beige: #f5f0eb;
+  --tua-border: #e0e0e0;
+  --tua-text: #020202;
+  --tua-text-muted: #636364;
+}
+
+/* ── Header ── */
+.header__row--top {
+  border-bottom: none;
+  padding-block: 12px;
+}
+
+.header__row--bottom {
+  border-bottom: 1px solid var(--tua-border);
+  padding-block: 8px;
+}
+
+.header-logo .header__heading,
+.header-logo .header__heading-link {
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+}
+
+.header-menu .menu-list__link,
+.header-menu .mega-menu__link {
+  text-transform: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--tua-text);
+}
+
+.header-menu .menu-list__link:hover,
+.header-menu .mega-menu__link:hover {
+  color: var(--tua-pink);
+}
+
+/* Top-row layout: logo left | search center | icons right */
+@media screen and (min-width: 750px) {
+  .header__row--top .header__columns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header__row--top .header__column--left {
+    flex: 0 0 auto;
+  }
+
+  .header__row--top .header__column--right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+  .header__row--top .header__column--right .search-action {
+    flex: 1;
+    max-width: 560px;
+    margin-inline: auto;
+    order: -1;
+  }
+
+  .header__row--top .header__column--right .header-actions {
+    flex: 0 0 auto;
+  }
+
+  .header__row--top .search-action .button-unstyled,
+  .header__row--top .search-action--text .header-actions__text-style {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    border: 1px solid var(--tua-border);
+    border-radius: 999px;
+    background: #ffffff;
+    font-size: 0.875rem;
+    color: var(--tua-text-muted);
+    font-weight: 400;
+  }
+
+  .header__row--top .search-action .svg-wrapper {
+    margin-left: auto;
+  }
+}
+
+/* ── Marquee ticker (hero bar) ── */
+marquee-component.color-custom-marquee_ticker,
+marquee-component[style*="background"] {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
+
+marquee-component .text-block p {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Section headings ── */
+.section-resource-list .text-block h2,
+.section-resource-list .text-block h3,
+.section-resource-list .text-block h4 {
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+}
+
+.section-resource-list .link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--tua-text);
+}
+
+/* ── Collection / category cards ── */
+.collection-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--tua-border);
+  background: var(--tua-beige);
+}
+
+.collection-card__content {
+  background: var(--tua-beige);
+  padding: 16px;
+}
+
+.collection-card__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── Product cards ── */
+.product-card {
+  border: 1px solid var(--tua-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.product-card__content {
+  padding: 10px 12px 14px;
+}
+
+.product-card .product-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.product-card .price {
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.product-card .price--sale,
+.product-card .price .price-item--sale {
+  color: var(--tua-red);
+}
+
+/* ── Buttons ── */
+.button:not(.button-secondary):not(.button-unstyled):not(.link) {
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 12px 20px;
+}
+
+.button-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ── Inputs & search ── */
+.field__input,
+.search-modal__input {
+  border-radius: 999px;
+  border-color: var(--tua-border);
+}
+
+.search-modal__submit,
+.predictive-search__submit {
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ── Sale badges ── */
+.product-badges .badge--sale {
+  background-color: var(--tua-red);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+}
+
+/* ── Cart bubble ── */
+.cart-bubble {
+  background-color: var(--tua-pink);
+  color: #ffffff;
+}
+
+/* ── Slideshow ── */
+.slideshow-section {
+  margin-bottom: 0;
+}
+
+.slideshow-section .slideshow-control {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* ── Footer ── */
+.footer-content,
+.footer-utilities {
+  border-top: 1px solid var(--tua-border);
+}
+
+/* ── Quick add / AGREGAR style ── */
+.quick-add__button,
+.product-form-buttons .button {
+  min-height: 40px;
+}
+
+/* ── Announcement bar hidden (TUA has no top bar) ── */
+.announcement-bar {
+  display: none;
+}

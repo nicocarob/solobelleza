@@ -22,78 +22,8 @@
             "padding-block-start": 48,
             "padding-block-end": 48
           },
-          "blocks": {
-            "heading": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>Profesionales en Cabello</h2>",
-                "text_color": "#ffffff",
-                "type_preset": "h2",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "center",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Expertas en ti. Encuentra lo último en tendencias y tecnología capilar.</p>",
-                "text_color": "#ffffff",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "center",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 20,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button": {
-              "type": "button",
-              "settings": {
-                "label": "Ver más",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading",
-            "text",
-            "button"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
@@ -113,333 +43,6 @@
         "autoplay_speed": 5,
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "benefits_section": {
-      "type": "section",
-      "blocks": {
-        "benefits_title": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><strong>CONOCE TUS BENEFICIOS AQUÍ</strong></h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h4",
-            "font": "var(--font-heading--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "benefits_row": {
-          "type": "group",
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "open_in_new_tab": false,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "benefit_1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "background_color": "#FFF8F9",
-                "border": "all",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 8,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "open_in_new_tab": false,
-                "padding-block-start": 24,
-                "padding-block-end": 24,
-                "padding-inline-start": 16,
-                "padding-inline-end": 16
-              },
-              "blocks": {
-                "icon_1": {
-                  "type": "icon",
-                  "settings": {
-                    "icon": "truck",
-                    "width": 32,
-                    "icon_color": "#000000"
-                  },
-                  "blocks": {}
-                },
-                "text_1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Despacho a todo Chile</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "icon_1",
-                "text_1"
-              ]
-            },
-            "benefit_2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "background_color": "#FFF8F9",
-                "border": "all",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 8,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "open_in_new_tab": false,
-                "padding-block-start": 24,
-                "padding-block-end": 24,
-                "padding-inline-start": 16,
-                "padding-inline-end": 16
-              },
-              "blocks": {
-                "icon_2": {
-                  "type": "icon",
-                  "settings": {
-                    "icon": "map_pin",
-                    "width": 32,
-                    "icon_color": "#000000"
-                  },
-                  "blocks": {}
-                },
-                "text_2": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Retiro en Tienda en 3 hrs</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "icon_2",
-                "text_2"
-              ]
-            },
-            "benefit_3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "center",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "background_color": "#FFF8F9",
-                "border": "all",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 8,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "open_in_new_tab": false,
-                "padding-block-start": 24,
-                "padding-block-end": 24,
-                "padding-inline-start": 16,
-                "padding-inline-end": 16
-              },
-              "blocks": {
-                "icon_3": {
-                  "type": "icon",
-                  "settings": {
-                    "icon": "price_tag",
-                    "width": 32,
-                    "icon_color": "#000000"
-                  },
-                  "blocks": {}
-                },
-                "text_3": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Ofertas y descuentos exclusivos</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "icon_3",
-                "text_3"
-              ]
-            }
-          },
-          "block_order": [
-            "benefit_1",
-            "benefit_2",
-            "benefit_3"
-          ]
-        }
-      },
-      "block_order": [
-        "benefits_title",
-        "benefits_row"
-      ],
-      "name": "Beneficios",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#ffffff",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 32
       }
     },
     "hair_types": {
@@ -484,7 +87,7 @@
             "title_text": {
               "type": "text",
               "settings": {
-                "text": "<h2><strong>TIPOS DE CABELLO</strong></h2>",
+                "text": "<h2><strong>Explora por categoría</strong></h2>",
                 "type_preset": "h4",
                 "font": "var(--font-heading--family)",
                 "font_size": "",
@@ -525,14 +128,13 @@
       "block_order": [
         "header_group"
       ],
-      "name": "Tipos de cabello",
+      "name": "Categorías",
       "settings": {
         "collection_list": [],
         "layout_type": "grid",
         "carousel_on_mobile": true,
         "max_collections": 6,
         "columns": 6,
-        "mobile_columns": "2",
         "columns_gap": 12,
         "rows_gap": 12,
         "bento_gap": 8,
@@ -540,7 +142,9 @@
         "gap": 20,
         "background_color": "#ffffff",
         "padding-block-start": 24,
-        "padding-block-end": 24
+        "padding-block-end": 24,
+        "mobile_columns": "2",
+        "name": "Categorías"
       }
     },
     "product_list_ofertas": {
@@ -582,7 +186,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3><strong>Ofertas</strong></h3>",
+                "text": "<h3><strong>¡Aún quedan unidades!</strong></h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -708,10 +312,10 @@
           ]
         }
       },
-      "name": "Ofertas",
+      "name": "Últimas unidades",
       "settings": {
         "collection": "all",
-        "layout_type": "grid",
+        "layout_type": "carousel",
         "carousel_on_mobile": true,
         "max_products": 4,
         "columns": 4,
@@ -768,7 +372,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3><strong>Nuevos</strong></h3>",
+                "text": "<h3><strong>Destacados</strong></h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -914,11 +518,52 @@
         "padding-block-start": 32,
         "padding-block-end": 48
       }
+    },
+    "marquee_ticker": {
+      "type": "marquee",
+      "blocks": {
+        "text_ticker": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Agosto es de los profesionales</p>",
+            "text_color": "#ffffff",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.875rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "nowrap",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_ticker"
+      ],
+      "name": "Ticker",
+      "settings": {
+        "movement_direction": "normal",
+        "background_color": "#000000",
+        "padding-block-start": 10,
+        "padding-block-end": 10,
+        "gap_between_elements": 48
+      }
     }
   },
   "order": [
     "slideshow_hero",
-    "benefits_section",
+    "marquee_ticker",
     "hair_types",
     "product_list_ofertas",
     "product_list_nuevos"
