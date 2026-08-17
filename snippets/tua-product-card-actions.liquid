@@ -1,0 +1,137 @@
+{%- doc -%}
+  TUA-style product card actions: quantity selector + cart button.
+  Multi-variant products open the quick-add modal (shade picker for tintes).
+
+  @param {object} product - The product object
+  @param {string} section_id - The section ID
+  @param {object} [block] - The block object
+{%- enddoc -%}
+
+{% liquid
+  assign product_form_id = 'TuaQuickAdd-ProductForm-' | append: product.id | append: '-' | append: block.id
+  assign choose_options_text = 'actions.choose' | t
+  assign variant = product.selected_or_first_available_variant
+
+  assign uses_selling_plans = false
+  if product.requires_selling_plan or product.selling_plan_groups.size > 0
+    assign uses_selling_plans = true
+  endif
+
+  if variant.available
+    assign can_add_to_cart = true
+  else
+    assign can_add_to_cart = false
+  endif
+
+  assign initial_button = 'choose'
+  assign render_add = false
+  assign render_choose = false
+
+  if product.variants_count == 1
+    assign initial_button = 'add'
+    assign render_add = true
+  elsif product.options.size == 1
+    assign first_option = product.options_with_values | first
+    assign swatch_count = first_option.values | map: 'swatch' | compact | size
+    assign render_choose = true
+    if product.selected_variant
+      assign initial_button = 'add'
+      assign render_add = true
+    elsif swatch_count > 0
+      assign render_add = true
+    endif
+  else
+    assign render_choose = true
+  endif
+
+  if uses_selling_plans
+    assign initial_button = 'choose'
+    assign render_add = false
+    assign render_choose = true
+  endif
+%}
+
+{% render 'fly-to-cart-styles' %}
+
+<div class="tua-product-card__actions">
+  <quick-add-component
+    class="tua-quick-add custom-color-quick-add"
+    ref="quickAdd"
+    data-product-title="{{ product.title }}"
+    data-product-id="{{ product.id }}"
+    data-quick-add-button="{{ initial_button }}"
+    data-product-options-count="{{ product.options.size }}"
+    data-uses-selling-plans="{{ uses_selling_plans }}"
+    data-renders-both-buttons="{% if render_add and render_choose %}true{% endif %}"
+  >
+    {% if render_add %}
+      <product-form-component
+        data-section-id="{{ section_id }}"
+        data-product-id="{{ product.id }}"
+        on:submit="/handleSubmit"
+        class="tua-quick-add__product-form-component"
+      >
+        <div
+          class="visually-hidden"
+          aria-live="assertive"
+          role="status"
+          aria-atomic="true"
+          ref="liveRegion"
+        ></div>
+        {%- form 'product', product, id: product_form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form', class: 'tua-product-card__form' -%}
+          <input
+            type="hidden"
+            name="id"
+            ref="variantId"
+            value="{{ variant.id }}"
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+          >
+          {% render 'quantity-selector',
+            product: product,
+            wrapper_class: 'tua-quantity-inline',
+            class: 'tua-quantity-selector'
+          %}
+          {% render 'add-to-cart-button',
+            add_to_cart_text: '',
+            class: 'tua-quick-add__button tua-quick-add__button--add add-to-cart-button',
+            can_add_to_cart: can_add_to_cart,
+            product: product
+          %}
+        {%- endform -%}
+      </product-form-component>
+    {% endif %}
+
+    {% if render_choose %}
+      {% unless render_add %}
+        <div class="tua-product-card__quantity">
+          {% render 'quantity-selector',
+            product: product,
+            wrapper_class: 'tua-quantity-standalone',
+            class: 'tua-quantity-selector'
+          %}
+        </div>
+      {% endunless %}
+      <button
+        class="button tua-quick-add__button tua-quick-add__button--choose add-to-cart-button"
+        type="button"
+        name="add"
+        on:click="quick-add-component/handleClick"
+        aria-label="{{ choose_options_text }}"
+      >
+        <span aria-hidden="true" class="svg-wrapper add-to-cart-icon">
+          {{- 'icon-add-to-cart.svg' | inline_asset_content -}}
+        </span>
+        <span class="visually-hidden">{{ choose_options_text }}</span>
+      </button>
+    {% endif %}
+  </quick-add-component>
+</div>
+
+{% render 'add-to-cart-button-styles' %}
+{% if render_choose %}
+  {% render 'variant-picker-styles' %}
+{% endif %}
+{% render 'quick-add-styles' %}
+{% render 'quick-add-modal-styles' %}

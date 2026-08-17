@@ -434,12 +434,25 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "product_vendor": {
+              "type": "_product-vendor",
+              "name": "Marca",
+              "settings": {},
+              "blocks": {}
+            },
+            "tua_actions": {
+              "type": "_tua-product-card-actions",
+              "name": "Acciones TUA",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
             "product_card_gallery_DNizbJ",
             "product_title_M7MJkb",
-            "price_gLWgA6"
+            "price_gLWgA6",
+            "tua_actions"
           ]
         }
       },

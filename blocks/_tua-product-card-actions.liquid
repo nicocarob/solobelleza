@@ -1,0 +1,16 @@
+
+{% liquid
+  assign product = closest.product
+%}
+
+{% if product != blank and product.available %}
+  {% render 'tua-product-card-actions', product: product, section_id: section.id, block: block %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Acciones TUA",
+  "tag": null,
+  "settings": []
+}
+{% endschema %}

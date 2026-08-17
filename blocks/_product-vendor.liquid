@@ -1,0 +1,19 @@
+{% liquid
+  assign product = closest.product
+%}
+
+{% if product != blank %}
+  <div class="tua-product-card__vendor" {{ block.shopify_attributes }}>
+  {% if product.vendor != blank %}
+    <span class="tua-product-card__vendor-text">{{ product.vendor }}</span>
+  {% endif %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Marca",
+  "tag": null,
+  "settings": []
+}
+{% endschema %}

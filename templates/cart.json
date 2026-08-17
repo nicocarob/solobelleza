@@ -217,12 +217,25 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "product_vendor": {
+              "type": "_product-vendor",
+              "name": "Marca",
+              "settings": {},
+              "blocks": {}
+            },
+            "tua_actions": {
+              "type": "_tua-product-card-actions",
+              "name": "Acciones TUA",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
             "product_card_gallery_PEPpfq",
             "product_title_WNMpHe",
-            "price_yXfkPX"
+            "price_yXfkPX",
+            "tua_actions"
           ]
         }
       },

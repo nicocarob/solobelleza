@@ -190,12 +190,26 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "product_vendor": {
+              "type": "_product-vendor",
+              "name": "Marca",
+              "settings": {},
+              "blocks": {}
+            },
+            "tua_actions": {
+              "type": "_tua-product-card-actions",
+              "name": "Acciones TUA",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
             "card-gallery",
+            "product_vendor",
             "product_title_4nY4eT",
-            "price_EzJzMm"
+            "price_EzJzMm",
+            "tua_actions"
           ]
         }
       },
